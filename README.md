@@ -28,7 +28,7 @@ A user may add to the to-do task list, and view pending and completed tasks they
 
 https://user-images.githubusercontent.com/103695916/163593280-b87ef027-cf73-432f-a165-fb8ee5fa410e.mov
 
-https://user-images.githubusercontent.com/103695916/163593270-74e04142-2b5c-42f5-bc75-063f5848bfd5.mov
+https://github.com/BitIndianCoder/TodoApp/blob/master/screenshot/ios.mp4
 
 <hr />
 <h3>Installation and Usage</h3>
