@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SafeAreaView, View, Text, ScrollView, TouchableOpacity, Keyboard, Alert, Platform } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
 import { Dropdown } from 'react-native-element-dropdown';
 import moment from 'moment'
 import styled from 'styled-components/native';
@@ -9,12 +8,13 @@ import { InputWithIcon } from '@component'
 import { Icon } from "@common";
 import { useToDoTaskState } from "@state";
 import styles from './style';
+import DatePicker from 'react-native-date-picker';
 
 /*========================================================
 * function Name: AddToDo screen design
 * function Purpose: using AddToDo screen design.
 * function Description: AddToDo screen using add form and other component.
-*=====================================================*/
+=====================================================*/
 
 const ButtonContainer = styled.TouchableOpacity`
     margin: 20px;
@@ -183,15 +183,19 @@ const AddToDo = (props) => {
                         </TouchableOpacity>
                     </View>
 
-                    {deadLineModel &&
-                        <View style={Platform.OS == 'ios' ? styles.pickerView : null}>
-                            <DateTimePicker
-                                mode="date"
-                                value={deadline}
-                                onChange={setDeadLineDate}
-                            />
-                        </View>
-                    }
+                    <DatePicker
+                        modal
+                        open={deadLineModel}
+                        date={deadline}
+                        onConfirm={(date) => {
+                            setDeadLineModel(false)
+                            setDeadline(date)
+                        }}
+                        onCancel={() => {
+                            setDeadLineModel(false)
+                        }}
+                        mode="date"
+                    />
 
                     <View style={styles.boxContainer}>
                         <View style={styles.timeView}>
@@ -223,24 +227,33 @@ const AddToDo = (props) => {
                         </View>
                     </View>
 
-                    {startTimeModel &&
-                        <View style={Platform.OS == 'ios' ? styles.pickerView : null}>
-                            <DateTimePicker
-                                mode="time"
-                                value={startTime}
-                                onChange={setStartDate}
-                            />
-                        </View>
-                    }
-                    {endTimeModel &&
-                        <View style={Platform.OS == 'ios' ? styles.pickerView : null}>
-                            <DateTimePicker
-                                mode="time"
-                                value={endTime}
-                                onChange={setEndDate}
-                            />
-                        </View>
-                    }
+                    <DatePicker
+                        modal
+                        open={startTimeModel}
+                        date={startTime}
+                        onConfirm={(time) => {
+                            setStartTimeModel(false)
+                            setStartTime(time)
+                        }}
+                        onCancel={() => {
+                            setStartTimeModel(false)
+                        }}
+                        mode="time"
+                    />
+
+                    <DatePicker
+                        modal
+                        open={endTimeModel}
+                        date={endTime}
+                        onConfirm={(time) => {
+                            setEndTimeModel(false)
+                            setEndTime(time)
+                        }}
+                        onCancel={() => {
+                            setEndTimeModel(false)
+                        }}
+                        mode="time"
+                    />
 
                     <View style={styles.boxContainer}>
                         <Text style={styles.normalText}>Remind</Text>
