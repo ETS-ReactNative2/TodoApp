@@ -14,6 +14,8 @@ A user may add to the to-do task list, and view pending and completed tasks they
     <img src="screenshot/Screenshot_1650032716.png" alt="Screenshot" height="400px width="300px" />                                
     <img src="screenshot/Screenshot_1650032722.png" alt="Screenshot" height="400px width="300px" />
 </div>
+
+
 <div align="center">Ipnone 11</div>
  <div align="center">
     <img src="screenshot/Simulator Screen Shot - iPhone 11 - 2022-04-15 at 19.50.40.png" alt="Screenshot" height="400px width="300px" />
@@ -28,7 +30,7 @@ A user may add to the to-do task list, and view pending and completed tasks they
 
 https://user-images.githubusercontent.com/103695916/163593280-b87ef027-cf73-432f-a165-fb8ee5fa410e.mov
 
-https://github.com/BitIndianCoder/TodoApp/blob/master/screenshot/ios.mp4
+https://user-images.githubusercontent.com/97036891/163700222-78b92b86-5189-4c9b-aa91-cb2c26349f4a.mp4
 
 <hr />
 <h3>Installation and Usage</h3>
